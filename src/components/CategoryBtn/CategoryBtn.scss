@@ -10,6 +10,7 @@
   transition: ease 300ms height;
   overflow-y: hidden;
   .cate {
+    width: 100%;
     height: 2.125rem;
     @include flex(space-between, center);
     position: relative;

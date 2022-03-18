@@ -1,0 +1,409 @@
+{
+  "products": [
+    {
+      "id": 512,
+      "name": "32-TB 6(5Pcs)Fitted",
+      "image": "https://api.homemall.com.mm//storage/prdouct/6226521ba3dd4.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "33500", "max": "33500" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 1280,
+      "name": "21-SF-641HLP 2Seat",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622f19443c777.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "686000", "max": "686000" },
+      "category": "Living Room"
+    },
+    {
+      "id": 1,
+      "name": "81-Back Pillow(CS-4343A/4343B/4343C/4343D/4343E)",
+      "image": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5db441.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "5000", "max": "5000" },
+      "category": "Hotel"
+    },
+    {
+      "id": 769,
+      "name": "21-NN-MSS-8801",
+      "image": "https://api.homemall.com.mm//storage/prdouct/62265226f0664.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "136000", "max": "136000" },
+      "category": "Office Furniture"
+    },
+    {
+      "id": 1281,
+      "name": "21-SF-641HLP Set",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622f194446d3b.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "2048000", "max": "2048000" },
+      "category": "Living Room"
+    },
+    {
+      "id": 2,
+      "name": "81-Season Blanket",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622651b5e2112.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "16800", "max": "16800" },
+      "category": "Hotel"
+    },
+    {
+      "id": 258,
+      "name": "11-Hotel Classic 5.5x6.5x8",
+      "image": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3a2ea2.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "328000", "max": "328000" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 1282,
+      "name": "21-SF-641HMP 2Seat",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622f19445129e.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "450000", "max": "450000" },
+      "category": "Living Room"
+    },
+    {
+      "id": 3,
+      "name": "81-BK1520-900B Single",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622651b600072.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "25500", "max": "25500" },
+      "category": "Hotel"
+    },
+    {
+      "id": 259,
+      "name": "11-Hotel Classic 6x6.5x8",
+      "image": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3ae4a3.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "355000", "max": "355000" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 771,
+      "name": "21-NN-MTV-2201",
+      "image": "https://api.homemall.com.mm//storage/prdouct/62265227087e3.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "87000", "max": "87000" },
+      "category": "Office Furniture"
+    },
+    {
+      "id": 1283,
+      "name": "21-SF-641HMP Set",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622f19445b84b.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "1383000", "max": "1383000" },
+      "category": "Living Room"
+    },
+    {
+      "id": 4,
+      "name": "81-BK2024-1400A Double",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622651b606c44.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "31500", "max": "31500" },
+      "category": "Hotel"
+    },
+    {
+      "id": 260,
+      "name": "11-HC Rubber 3.5x6.5x10",
+      "image": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3c54eb.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "384000", "max": "384000" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 772,
+      "name": "21-NN-MTV-2202",
+      "image": "https://api.homemall.com.mm//storage/prdouct/6226522712114.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "152000", "max": "152000" },
+      "category": "Office Furniture"
+    },
+    {
+      "id": 1284,
+      "name": "21-SF-641APU 2Seat",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622f194465d87.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "465000", "max": "465000" },
+      "category": "Living Room"
+    },
+    {
+      "id": 5,
+      "name": "81-CrystalSuperSoft-CP121801 4x6",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622651b60d533.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "42400", "max": "42400" },
+      "category": "Hotel"
+    },
+    {
+      "id": 261,
+      "name": "11-HC Rubber 5.5x6.5x10",
+      "image": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3dc7ef.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "586500", "max": "586500" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 773,
+      "name": "21-NN-MTV-2203",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622652271b8f5.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "178000", "max": "178000" },
+      "category": "Office Furniture"
+    },
+    {
+      "id": 1285,
+      "name": "21-SF-641APU Set",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622f1944702d6.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "1455000", "max": "1455000" },
+      "category": "Living Room"
+    },
+    {
+      "id": 6,
+      "name": "81-BelgianCashmere-CP121802 4x6",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622651b613faf.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "47700", "max": "47700" },
+      "category": "Hotel"
+    },
+    {
+      "id": 262,
+      "name": "11-HC Rubber 6x6.5x10",
+      "image": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3f3a54.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "640000", "max": "640000" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 518,
+      "name": "32-TB 3.5(2Pcs)Flat",
+      "image": "https://api.homemall.com.mm//storage/prdouct/6226521c23e61.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "20000", "max": "20000" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 774,
+      "name": "21-NN-MTV-2204",
+      "image": "https://api.homemall.com.mm//storage/prdouct/6226522725060.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "152000", "max": "152000" },
+      "category": "Office Furniture"
+    },
+    {
+      "id": 1286,
+      "name": "21-SF-643APN 2Seat",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622f19447c95f.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "261000", "max": "261000" },
+      "category": "Living Room"
+    },
+    {
+      "id": 7,
+      "name": "81-Fale-CP121803 4x6",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622651b61a8a1.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "47700", "max": "47700" },
+      "category": "Hotel"
+    },
+    {
+      "id": 519,
+      "name": "32-TB 3.5(3Pcs)Flat",
+      "image": "https://api.homemall.com.mm//storage/prdouct/6226521c3741e.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "22500", "max": "22500" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 1287,
+      "name": "21-SF-643APN QC",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622f194483fdc.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "286000", "max": "286000" },
+      "category": "Living Room"
+    },
+    {
+      "id": 8,
+      "name": "81-BelgianCashmere-CP121804 4x6",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622651b621297.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "47700", "max": "47700" },
+      "category": "Hotel"
+    },
+    {
+      "id": 264,
+      "name": "11-Deluxe 3.5x6.5x9",
+      "image": "https://api.homemall.com.mm//storage/prdouctgallery/622651c48eb7a.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "290000", "max": "290000" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 520,
+      "name": "32-TB 6(3Pcs)Flat",
+      "image": "https://api.homemall.com.mm//storage/prdouct/6226521c4aa2e.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "29000", "max": "29000" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 776,
+      "name": "21-NN-MTV-2206",
+      "image": "https://api.homemall.com.mm//storage/prdouct/6226522731337.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "122000", "max": "122000" },
+      "category": "Office Furniture"
+    },
+    {
+      "id": 1288,
+      "name": "21-SF-643APN SET",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622f19448b683.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "547000", "max": "547000" },
+      "category": "Living Room"
+    },
+    {
+      "id": 9,
+      "name": "81-Fale-CP121806 4x6",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622651b627c90.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "47700", "max": "47700" },
+      "category": "Hotel"
+    },
+    {
+      "id": 521,
+      "name": "32-TB 6(4Pcs)Flat",
+      "image": "https://api.homemall.com.mm//storage/prdouct/6226521c5e078.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "31500", "max": "31500" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 777,
+      "name": "21-NN-MWR-9901",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622652273abb4.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "229000", "max": "229000" },
+      "category": "Office Furniture"
+    },
+    {
+      "id": 1289,
+      "name": "21-SF-837HLP 1Seat",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622f194492cff.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "586000", "max": "586000" },
+      "category": "Living Room"
+    },
+    {
+      "id": 10,
+      "name": "81-BelgianCashmere-CP121807 4x6",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622651b62ea1b.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "47700", "max": "47700" },
+      "category": "Hotel"
+    },
+    {
+      "id": 522,
+      "name": "32-TB 6(5Pcs)Flat",
+      "image": "https://api.homemall.com.mm//storage/prdouct/6226521c7159f.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "33500", "max": "33500" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 778,
+      "name": "21-NN-MWR-9902",
+      "image": "https://api.homemall.com.mm//storage/prdouct/62265227444da.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "324000", "max": "324000" },
+      "category": "Office Furniture"
+    },
+    {
+      "id": 1290,
+      "name": "21-SF-837HMP 1Seat",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622f19449d192.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "330000", "max": "330000" },
+      "category": "Living Room"
+    },
+    {
+      "id": 11,
+      "name": "81-CrystalVelvet-CP060902 2x3",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622651b63539d.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "9300", "max": "9300" },
+      "category": "Hotel"
+    },
+    {
+      "id": 523,
+      "name": "32-TB Bed Sheet Fitted 3.5",
+      "image": "https://api.homemall.com.mm//storage/prdouct/6226521c84b22.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "15500", "max": "15500" },
+      "category": "Bed Room"
+    },
+    {
+      "id": 779,
+      "name": "21-NN-MWR-9903",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622652274e09d.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "161000", "max": "161000" },
+      "category": "Office Furniture"
+    },
+    {
+      "id": 1291,
+      "name": "21-SF-837APN 1Seat",
+      "image": "https://api.homemall.com.mm//storage/prdouct/622f1944a757c.jpg",
+      "brand": "",
+      "wishlist": null,
+      "price": { "min": "328000", "max": "328000" },
+      "category": "Living Room"
+    }
+  ]
+}
