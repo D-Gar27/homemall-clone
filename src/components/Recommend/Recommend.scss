@@ -1,0 +1,26 @@
+@import '../../variables';
+
+.recommend {
+  margin-top: 3rem;
+  h2 {
+    font-size: 1.25rem;
+    color: $gray;
+    font-weight: 100;
+  }
+  .recommended_items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    height: 100%;
+    margin-top: 1.5rem;
+  }
+}
+
+@include tablet-sm {
+  .recommend {
+    .recommended_items {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  }
+}

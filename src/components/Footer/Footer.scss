@@ -1,14 +1,16 @@
 @import '../../variables';
 
 .footer {
+  width: 100vw;
+  // overflow: hidden;
   min-height: 21.3rem;
   background-color: $dark_blue;
   position: relative;
   .footer_container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    justify-items: center;
     align-items: baseline;
+    width: 100%;
     .sh_content {
       padding-top: 1.5rem;
       width: 100%;

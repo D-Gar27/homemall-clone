@@ -1,0 +1,168 @@
+@import '../../variables';
+
+.products_page {
+  .products_title {
+    text-transform: uppercase;
+  }
+  .detail_page_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    justify-items: center;
+    align-items: flex-start;
+    padding-top: 2.5rem;
+    .product_images {
+      width: 100%;
+      @include flex(center, center, $vertical: true);
+      gap: 1rem;
+      .current_img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border: solid 1px $light_gray;
+      }
+      .thumbs {
+        width: 100%;
+        max-width: 40rem;
+        overflow-x: hidden;
+        @include flex(flex-start, center);
+        gap: 1rem;
+        .thumb {
+          width: 12.375rem;
+          height: 9.28rem;
+        }
+      }
+    }
+    .product_details {
+      position: sticky;
+      top: 7rem;
+      width: 100%;
+      @include flex(flex-start, flex-start, $vertical: true);
+      gap: 1.7rem;
+      color: $gray;
+      .product_name {
+        @include flex(flex-start, flex-start, $vertical: true);
+        h2 {
+          font-weight: 100;
+          font-size: 1.5rem;
+        }
+        small {
+          font-size: 0.75rem;
+          font-weight: 100;
+        }
+      }
+      h3 {
+        font-size: 1rem;
+        font-weight: 100;
+      }
+      .price {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+      .quantity {
+        @include flex(center, center);
+        gap: 5rem;
+        .quantity_input {
+          border: solid 1px $light_gray;
+          border-radius: 5px;
+          @include flex(center, center);
+          width: 7.375rem;
+          height: 2.75rem;
+          position: relative;
+          color: $white;
+          input {
+            @include flex(center, center);
+            padding-right: 1rem;
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            text-align: center;
+            font-size: 1rem;
+            position: relative;
+          }
+          .control_btns {
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            top: 0;
+            height: 100%;
+            background-color: $white;
+            border-left: solid 1px $light_gray;
+            @include flex(center, center, $vertical: true);
+            button {
+              cursor: pointer;
+              height: 100%;
+              width: 2rem;
+              border: none;
+              @include flex(center, center);
+              background-color: transparent;
+            }
+            .add {
+              border-bottom: solid 1px $light_gray;
+            }
+          }
+        }
+      }
+      .btns {
+        position: sticky;
+        bottom: 0;
+        padding-bottom: 1rem;
+        margin-bottom: -1rem;
+        z-index: 5;
+        @include flex(flex-start, center);
+        gap: 1rem;
+        button {
+          height: 2.25rem;
+          @include flex(center, center);
+        }
+        .add_to_bag {
+          gap: 0.5rem;
+          width: 15rem;
+          background-color: $dark_blue;
+          padding: 0.6rem;
+          color: $light_gray;
+          cursor: pointer;
+          position: relative;
+          border: solid $dark_blue 1px;
+          .cart_icon {
+            font-size: 1.25rem;
+          }
+          &:hover {
+            color: $dark_blue;
+            background-color: $light_gray;
+          }
+          &:disabled {
+            color: $white;
+            border: solid #d1d5db 1px;
+            background-color: #918f9c;
+          }
+        }
+        .heart_btn {
+          width: 3rem;
+          border: solid 1px $light_gray;
+          background-color: transparent;
+          cursor: pointer;
+          .heart_icon {
+            font-size: 1rem;
+          }
+          &:hover {
+            border: solid 1px $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .products_page {
+    .detail_page_container {
+      display: grid;
+      grid-template-columns: 1fr;
+      .product_details {
+        margin-top: 1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+}

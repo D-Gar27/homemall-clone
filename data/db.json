@@ -6,8 +6,51 @@
       "image": "https://api.homemall.com.mm//storage/prdouct/6226521ba3dd4.jpg",
       "brand": "",
       "wishlist": null,
+      "category": "Bed Room",
       "price": { "min": "33500", "max": "33500" },
-      "category": "Bed Room"
+      "code": "3201TB01FI-6066-5P",
+      "images": [
+        {
+          "id": 14857,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226521ba3dd4.jpg"
+        },
+        {
+          "id": 14858,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226521ba7ef8.jpg"
+        },
+        {
+          "id": 14859,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226521ba953b.jpg"
+        },
+        {
+          "id": 14860,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226521baabf0.jpg"
+        },
+        {
+          "id": 14861,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226521bac267.jpg"
+        },
+        {
+          "id": 14862,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226521bad95e.jpg"
+        },
+        {
+          "id": 14863,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226521baef61.jpg"
+        },
+        {
+          "id": 14864,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226521bb055d.jpg"
+        },
+        {
+          "id": 14865,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226521bb1bd9.jpg"
+        },
+        {
+          "id": 14866,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226521bb31bf.jpg"
+        }
+      ]
     },
     {
       "id": 1280,
@@ -16,7 +59,22 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "686000", "max": "686000" },
-      "category": "Living Room"
+      "category": "Living Room",
+      "code": "212SF01HLP641-2S",
+      "images": [
+        {
+          "id": 21552,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622f19443c777.jpg"
+        },
+        {
+          "id": 21553,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622f194440ddd.jpg"
+        },
+        {
+          "id": 21554,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622f194442573.jpg"
+        }
+      ]
     },
     {
       "id": 1,
@@ -25,7 +83,26 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "5000", "max": "5000" },
-      "category": "Hotel"
+      "category": "Hotel",
+      "code": "81RS39KCC-BP-CS4343",
+      "images": [
+        {
+          "id": 1,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5d68b1.jpg"
+        },
+        {
+          "id": 2,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5db441.jpg"
+        },
+        {
+          "id": 3,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5dca80.jpg"
+        },
+        {
+          "id": 4,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5de102.jpg"
+        }
+      ]
     },
     {
       "id": 769,
@@ -34,7 +111,22 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "136000", "max": "136000" },
-      "category": "Office Furniture"
+      "category": "Office Furniture",
+      "code": "211FP07NNSS8801",
+      "images": [
+        {
+          "id": 15957,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/62265226f0664.jpg"
+        },
+        {
+          "id": 15958,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226522700557.jpg"
+        },
+        {
+          "id": 15959,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226522701b64.jpg"
+        }
+      ]
     },
     {
       "id": 1281,
@@ -43,7 +135,22 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "2048000", "max": "2048000" },
-      "category": "Living Room"
+      "category": "Living Room",
+      "code": "212SF01HLP641-SET",
+      "images": [
+        {
+          "id": 21555,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622f194446d3b.jpg"
+        },
+        {
+          "id": 21556,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622f19444b396.jpg"
+        },
+        {
+          "id": 21557,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622f19444cb0e.jpg"
+        }
+      ]
     },
     {
       "id": 2,
@@ -52,7 +159,46 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "16800", "max": "16800" },
-      "category": "Hotel"
+      "category": "Hotel",
+      "code": "81RS39KCC-BLK-Season",
+      "images": [
+        {
+          "id": 5,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5e2112.jpg"
+        },
+        {
+          "id": 6,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5e662c.jpg"
+        },
+        {
+          "id": 7,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5e7d0f.jpg"
+        },
+        {
+          "id": 8,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5e9368.jpg"
+        },
+        {
+          "id": 9,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5ea9cf.jpg"
+        },
+        {
+          "id": 10,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5ec10a.jpg"
+        },
+        {
+          "id": 11,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5ed756.jpg"
+        },
+        {
+          "id": 12,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5eed8a.jpg"
+        },
+        {
+          "id": 13,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b5f03cb.jpg"
+        }
+      ]
     },
     {
       "id": 258,
@@ -61,7 +207,58 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "328000", "max": "328000" },
-      "category": "Bed Room"
+      "category": "Bed Room",
+      "code": "111SM06HC-566608",
+      "images": [
+        {
+          "id": 1288,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c392f13.jpg"
+        },
+        {
+          "id": 1289,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c39762b.jpg"
+        },
+        {
+          "id": 1290,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c398c4c.jpg"
+        },
+        {
+          "id": 1291,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c39a245.jpg"
+        },
+        {
+          "id": 1292,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c39b987.jpg"
+        },
+        {
+          "id": 1293,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c39d26d.jpg"
+        },
+        {
+          "id": 1294,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c39e89b.jpg"
+        },
+        {
+          "id": 1295,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c39fe8c.jpg"
+        },
+        {
+          "id": 1296,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3a1592.jpg"
+        },
+        {
+          "id": 1297,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3a2ea2.jpg"
+        },
+        {
+          "id": 1298,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3a4573.jpg"
+        },
+        {
+          "id": 1299,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3a5b6b.jpg"
+        }
+      ]
     },
     {
       "id": 1282,
@@ -70,7 +267,22 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "450000", "max": "450000" },
-      "category": "Living Room"
+      "category": "Living Room",
+      "code": "212SF02HMP641-2S",
+      "images": [
+        {
+          "id": 21558,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622f19445129e.jpg"
+        },
+        {
+          "id": 21559,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622f194455935.jpg"
+        },
+        {
+          "id": 21560,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622f1944570b2.jpg"
+        }
+      ]
     },
     {
       "id": 3,
@@ -79,7 +291,14 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "25500", "max": "25500" },
-      "category": "Hotel"
+      "category": "Hotel",
+      "code": "81RS39KCC-BLK1520Sin",
+      "images": [
+        {
+          "id": 14,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b600072.jpg"
+        }
+      ]
     },
     {
       "id": 259,
@@ -88,7 +307,58 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "355000", "max": "355000" },
-      "category": "Bed Room"
+      "category": "Bed Room",
+      "code": "111SM06HC-606608",
+      "images": [
+        {
+          "id": 1300,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3a9d48.jpg"
+        },
+        {
+          "id": 1301,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3ae4a3.jpg"
+        },
+        {
+          "id": 1302,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3afabe.jpg"
+        },
+        {
+          "id": 1303,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3b10a2.jpg"
+        },
+        {
+          "id": 1304,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3b27e4.jpg"
+        },
+        {
+          "id": 1305,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3b40ba.jpg"
+        },
+        {
+          "id": 1306,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3b5702.jpg"
+        },
+        {
+          "id": 1307,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3b6cd2.jpg"
+        },
+        {
+          "id": 1308,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3b83d5.jpg"
+        },
+        {
+          "id": 1309,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3b9ccf.jpg"
+        },
+        {
+          "id": 1310,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3bb390.jpg"
+        },
+        {
+          "id": 1311,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3bc99f.jpg"
+        }
+      ]
     },
     {
       "id": 771,
@@ -97,7 +367,22 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "87000", "max": "87000" },
-      "category": "Office Furniture"
+      "category": "Office Furniture",
+      "code": "211FP07NNTV2201",
+      "images": [
+        {
+          "id": 15960,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/62265227087e3.jpg"
+        },
+        {
+          "id": 15961,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622652270c9da.jpg"
+        },
+        {
+          "id": 15962,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622652270dfbe.jpg"
+        }
+      ]
     },
     {
       "id": 1283,
@@ -106,7 +391,22 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "1383000", "max": "1383000" },
-      "category": "Living Room"
+      "category": "Living Room",
+      "code": "212SF02HMP641-SET",
+      "images": [
+        {
+          "id": 21561,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622f19445b84b.jpg"
+        },
+        {
+          "id": 21562,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622f19445fe94.jpg"
+        },
+        {
+          "id": 21563,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622f194461615.jpg"
+        }
+      ]
     },
     {
       "id": 4,
@@ -115,7 +415,14 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "31500", "max": "31500" },
-      "category": "Hotel"
+      "category": "Hotel",
+      "code": "81RS39KCC-BLK2024Dou",
+      "images": [
+        {
+          "id": 15,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651b606c44.jpg"
+        }
+      ]
     },
     {
       "id": 260,
@@ -124,7 +431,58 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "384000", "max": "384000" },
-      "category": "Bed Room"
+      "category": "Bed Room",
+      "code": "111SM26HCRB-366610",
+      "images": [
+        {
+          "id": 1312,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3c0b26.jpg"
+        },
+        {
+          "id": 1313,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3c54eb.jpg"
+        },
+        {
+          "id": 1314,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3c6cb9.jpg"
+        },
+        {
+          "id": 1315,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3c8304.jpg"
+        },
+        {
+          "id": 1316,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3c9a24.jpg"
+        },
+        {
+          "id": 1317,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3cb32c.jpg"
+        },
+        {
+          "id": 1318,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3cc954.jpg"
+        },
+        {
+          "id": 1319,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3cdf39.jpg"
+        },
+        {
+          "id": 1320,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3cf664.jpg"
+        },
+        {
+          "id": 1321,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3d0f7f.jpg"
+        },
+        {
+          "id": 1322,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3d25ca.jpg"
+        },
+        {
+          "id": 1323,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/622651c3d3bf1.jpg"
+        }
+      ]
     },
     {
       "id": 772,
@@ -133,7 +491,22 @@
       "brand": "",
       "wishlist": null,
       "price": { "min": "152000", "max": "152000" },
-      "category": "Office Furniture"
+      "category": "Office Furniture",
+      "code": "211FP07NNTV2202",
+      "images": [
+        {
+          "id": 15963,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226522712114.jpg"
+        },
+        {
+          "id": 15964,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/62265227161c4.jpg"
+        },
+        {
+          "id": 15965,
+          "thumb": "https://api.homemall.com.mm//storage/prdouctgallery/6226522717765.jpg"
+        }
+      ]
     },
     {
       "id": 1284,

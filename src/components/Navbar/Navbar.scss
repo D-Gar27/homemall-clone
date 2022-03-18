@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   background-color: rgba($color: $white, $alpha: 0.95);
-  z-index: 10;
+  z-index: 30;
   .navbar {
     width: 100%;
     height: 3.75rem;
@@ -194,6 +194,8 @@
         height: 40px;
       }
       .nav_menu {
+        position: relative;
+        z-index: 1;
         .social_media {
           display: none;
         }
@@ -210,16 +212,18 @@
 @include tablet-sm {
   .header {
     .navbar {
-      grid-template-columns: 1fr 1fr;
+      @include flex(space-between, center);
+      // grid-template-columns: 1fr 1fr;
       width: 100%;
       .search_bar_container {
         transform: translate(100vw);
         position: absolute;
         background-color: white;
         height: 100%;
-        width: 100%;
+        width: 100vw;
         z-index: 20;
-        padding-inline: 1rem;
+        padding-right: 2rem;
+        padding-left: 1rem;
         @include flex(flex-start, center);
         gap: 1rem;
         transition: transform 300ms ease;
@@ -227,8 +231,10 @@
           display: block;
         }
         .search_bar {
-          max-width: 100%;
           width: 100%;
+        }
+        .nav_menu {
+          gap: 0.5rem;
         }
       }
       .opened_searchbar {

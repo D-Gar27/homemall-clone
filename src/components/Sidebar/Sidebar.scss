@@ -4,26 +4,26 @@
   width: 100%;
   @include flex(flex-start, flex-start, $vertical: true);
   gap: 1.75rem;
-  //   * {
-  //     position: sticky;
-  //     top: 3.75rem;
-  //     background-color: white;
-  //   }
   .filter_text {
     font-size: 1.25rem;
     color: $gray;
   }
   .clear_btn {
     width: 100%;
-    border: none;
     background-color: $dark_blue;
-    height: 2.25rem;
+    padding: 0.6rem;
     color: $light_gray;
     cursor: pointer;
+    position: relative;
+    border: solid $dark_blue 1px;
     &:hover {
-      border: solid $dark_blue 1px;
       color: $dark_blue;
       background-color: $light_gray;
+    }
+    &:disabled {
+      color: $white;
+      border: solid #d1d5db 1px;
+      background-color: #918f9c;
     }
   }
   h4 {
@@ -31,8 +31,12 @@
     color: $dark_blue;
   }
   .categories_container {
+    position: sticky;
+    top: 5rem;
+    z-index: 1;
     margin-top: 0.5rem;
     width: 100%;
+    background-color: $white;
     h4 {
       margin-bottom: 0.5rem;
     }
@@ -41,8 +45,31 @@
       gap: 1rem;
     }
   }
-  .brands {
+  .price_range {
+    padding-block: 1rem;
+    position: sticky;
+    top: 5rem;
+    z-index: 2;
     width: 100%;
+    background-color: $white;
+    margin-block: -1rem;
+  }
+  .colors {
+    padding-block: 1rem;
+    margin-block: -1rem;
+    position: sticky;
+    top: 5rem;
+    z-index: 2;
+    width: 100%;
+    background-color: $white;
+  }
+  .brands {
+    padding-top: 1rem;
+    margin-top: -1rem;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    background-color: $white;
     .brands_container {
       margin-top: 0.5rem;
       display: grid;
@@ -70,10 +97,43 @@
       }
     }
   }
+  .blank {
+    width: 100%;
+    height: 105%;
+    background-color: $white;
+    position: relative;
+    margin-top: -1.75rem;
+    z-index: 3;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      height: 3px;
+      width: 100%;
+      background-color: $white;
+    }
+  }
 }
 
 @include tablet {
   .sidebar {
-    display: none;
+    overflow: scroll;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    z-index: 15;
+    background-color: $white;
+    width: 100%;
+    transition: 300ms ease top;
+    padding-inline: 1rem;
+    padding-top: 1.5rem;
+    overflow-y: scroll;
+    height: max-content;
+    .clear_btn {
+      display: none;
+    }
+  }
+  .opened_sidebar {
+    top: 5rem;
   }
 }

@@ -1,47 +1,79 @@
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import Pagination from '../Pagination/Pagination';
+import ProductArticle from '../ProductArticle/ProductArticle';
 import Sidebar from '../Sidebar/Sidebar';
 import './Products.scss';
-import { BsHeart } from 'react-icons/bs';
+import { BiFilterAlt } from 'react-icons/bi';
+
+const categories = [
+  'Bed Room',
+  'Kitchen Room',
+  'Hotel',
+  'Office Funiture',
+  'Home Appliances',
+  'Bedding Accessories',
+  'Living Room',
+];
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  let [searchParams] = useSearchParams();
+  const [openFilter, setOpenFilter] = useState(false);
+  const category = searchParams.get('category');
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const res = await fetch(
-          'http://localhost:3001/products?_page=2&_limit=15'
+          `http://localhost:3001/products?_limit=15&_page=1`
         );
         const data = await res.json();
-        console.log(data);
         setProducts(data);
       } catch (error) {
         console.log(error);
       }
     };
     fetchProducts();
-  }, []);
+  }, [category]);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch(`http://localhost:3001/products`);
+        const data = await res.json();
+        const filtered = data.filter((product) =>
+          product.category.includes(categories[category[category.length - 1]])
+        );
+        setProducts(filtered);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchProducts();
+  }, [category]);
   return (
     <main className="products_page">
       <h2 className="products_title">PRODUCTS</h2>
       <div className="container products_page_container">
-        <Sidebar />
+        <Sidebar openFilter={openFilter} />
         <section className="products_container">
-          {products &&
-            products.map((product) => {
-              return (
-                <article className="product_article" key={product?.id}>
-                  <img src={product?.image} alt="" className="product_img" />
-                  <div className="info">
-                    <p className="product_name">{product?.name}</p>
-                    <p className="product_price">{product?.price?.max} MMK</p>
-                  </div>
-                  <button className="heart_icon">
-                    <BsHeart />
-                  </button>
-                </article>
-              );
-            })}
+          <button className="filter_btn" onClick={() => setOpenFilter(true)}>
+            <BiFilterAlt className="filter_icon" />
+            FILTER BY
+          </button>
+          <div className="products">
+            {products && products.length ? (
+              products.map((product) => {
+                return <ProductArticle product={product} key={product.id} />;
+              })
+            ) : (
+              <section className="no_products">
+                <h2>NO PRODUCTS TO SHOW</h2>
+                <button className="clear_btn">CLEAR FILERS</button>
+              </section>
+            )}
+          </div>
         </section>
+        {/* <Pagination /> */}
       </div>
     </main>
   );
