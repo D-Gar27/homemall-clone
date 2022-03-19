@@ -1,5 +1,8 @@
 @import '../../variables';
 
+.placeholder {
+  display: none;
+}
 .sidebar {
   width: 100%;
   @include flex(flex-start, flex-start, $vertical: true);
@@ -7,6 +10,9 @@
   .filter_text {
     font-size: 1.25rem;
     color: $gray;
+    .close_icon {
+      display: none;
+    }
   }
   .clear_btn {
     width: 100%;
@@ -113,27 +119,116 @@
       background-color: $white;
     }
   }
+  .apply_btns {
+    width: 100%;
+    @include flex(space-between, center);
+    display: none;
+  }
 }
 
 @include tablet {
-  .sidebar {
-    overflow: scroll;
+  .placeholder {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: $gray, $alpha: 0.5);
     position: fixed;
+    z-index: 80;
+    left: 0;
+    top: 0;
+  }
+  .sidebar {
+    position: fixed;
+    width: 100%;
     top: 100%;
     left: 0;
-    z-index: 15;
+    bottom: 0;
+    overflow-y: scroll;
+    z-index: 100;
     background-color: $white;
-    width: 100%;
     transition: 300ms ease top;
     padding-inline: 1rem;
-    padding-top: 1.5rem;
-    overflow-y: scroll;
-    height: max-content;
+    padding-top: 2rem;
+    border-radius: 0.5rem;
+    .filter_text {
+      margin-top: -1rem;
+      width: 100vw;
+      font-size: 1rem;
+      color: $dark_blue;
+      @include flex(space-between, center);
+      padding-bottom: 1rem;
+      margin-left: -1rem;
+      padding-inline: 1rem;
+      border-bottom: solid 1px $light_gray;
+      font-weight: bold;
+      position: relative;
+      background-color: $white;
+      .close_icon {
+        display: block;
+        font-size: 1.1rem;
+      }
+    }
     .clear_btn {
       display: none;
     }
+    .categories_container {
+      position: relative;
+      top: 0;
+    }
+    .price_range {
+      top: 0;
+      position: relative;
+    }
+    .colors {
+      position: relative;
+      top: 0rem;
+    }
+    .brands {
+      position: relative;
+      .brands_container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+    }
+    .blank {
+      display: none;
+    }
+    .apply_btns {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 110;
+      width: 100%;
+      background-color: $white;
+      padding: 0.5rem 1rem;
+      display: flex;
+      gap: 1rem;
+      button {
+        height: 2.25rem;
+        width: 100%;
+      }
+      .apply_btn {
+        width: 100%;
+        background-color: $dark_blue;
+        color: $light_gray;
+        cursor: pointer;
+        border: solid $dark_blue 1px;
+        &:hover {
+          color: $dark_blue;
+          background-color: $light_gray;
+        }
+      }
+      .clear_btn2 {
+        width: 100%;
+        border: solid 1px $light_gray;
+        background-color: transparent;
+        color: $gray;
+        &:hover {
+          border: solid 1px $red;
+        }
+      }
+    }
   }
   .opened_sidebar {
-    top: 5rem;
+    top: 11rem;
   }
 }

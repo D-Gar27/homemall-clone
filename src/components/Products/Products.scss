@@ -1,11 +1,10 @@
 @import '../../variables';
 
-.products_page {
+.page {
   width: 100vw;
   min-height: 100vh;
   padding-top: 6.125rem;
-  // overflow-x: hidden;
-  .products_title {
+  .title {
     background-color: $white_gray;
     color: $dark_blue;
     font-size: 2rem;
@@ -84,7 +83,7 @@
 }
 
 @include tablet {
-  .products_page {
+  .page {
     padding-top: 3.75rem;
     .products_page_container {
       padding-top: 1rem;
@@ -103,8 +102,11 @@
 }
 
 @include tablet-sm {
-  .products_page {
-    padding-top: 3.75rem;
+  .page {
+    .title {
+      font-size: 1.5rem;
+      height: 7.5rem;
+    }
     .products_page_container {
       .products_container {
         .products {

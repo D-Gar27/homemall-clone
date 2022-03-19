@@ -1,7 +1,7 @@
 @import '../../variables';
 
-.products_page {
-  .products_title {
+.page {
+  .title {
     text-transform: uppercase;
   }
   .detail_page_container {
@@ -20,15 +20,24 @@
         aspect-ratio: 1 / 1;
         border: solid 1px $light_gray;
       }
-      .thumbs {
-        width: 100%;
-        max-width: 40rem;
+      .thumbs_container {
         overflow-x: hidden;
-        @include flex(flex-start, center);
-        gap: 1rem;
+      }
+      .thumbs {
+        transition: transform 200ms ease;
+        width: 100%;
+        max-width: 40.1rem;
+        display: flex;
+        gap: 1.3rem;
         .thumb {
+          cursor: pointer;
+          border: solid 1px $light_gray;
+          width: 100%;
           width: 12.375rem;
-          height: 9.28rem;
+          aspect-ratio: 2 / 1.5;
+          &:hover {
+            border: solid 1px $gray;
+          }
         }
       }
     }
@@ -155,7 +164,7 @@
 }
 
 @include tablet {
-  .products_page {
+  .page {
     .detail_page_container {
       display: grid;
       grid-template-columns: 1fr;

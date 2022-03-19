@@ -18,6 +18,7 @@
     position: relative;
     overflow-x: hidden;
     .logo {
+      width: 100%;
       justify-self: start;
       width: max-content;
       height: 3.125rem;
@@ -70,6 +71,21 @@
         @include flex(center, center);
         &:hover {
           border: solid 1px $light_gray;
+        }
+      }
+      .cart {
+        position: relative;
+        .items_quantity {
+          position: absolute;
+          background-color: $red;
+          color: white;
+          width: 0.75rem;
+          aspect-ratio: 1 / 1;
+          border-radius: 3px;
+          font-size: 0.75rem;
+          @include flex(center, center);
+          right: 2px;
+          top: 0;
         }
       }
       .outer_search_icon {
@@ -171,6 +187,7 @@
       &.products {
         color: $primary;
         position: relative;
+        height: 100%;
         &::after {
           content: '';
           position: absolute;
@@ -181,6 +198,9 @@
           top: 100%;
           transform: translateX(-50%);
         }
+      }
+      .link {
+        color: $gray;
       }
     }
   }
@@ -213,8 +233,12 @@
   .header {
     .navbar {
       @include flex(space-between, center);
-      // grid-template-columns: 1fr 1fr;
       width: 100%;
+      .logo {
+        flex: 1;
+        flex-shrink: 2;
+        flex-grow: 0;
+      }
       .search_bar_container {
         transform: translate(100vw);
         position: absolute;
@@ -233,9 +257,9 @@
         .search_bar {
           width: 100%;
         }
-        .nav_menu {
-          gap: 0.5rem;
-        }
+      }
+      .nav_menu {
+        gap: 0.5rem;
       }
       .opened_searchbar {
         transition: transform 300ms ease;

@@ -40,10 +40,14 @@ const Products = () => {
       try {
         const res = await fetch(`http://localhost:3001/products`);
         const data = await res.json();
-        const filtered = data.filter((product) =>
-          product.category.includes(categories[category[category.length - 1]])
-        );
-        setProducts(filtered);
+        if (category?.length) {
+          const filtered = data.filter((product) =>
+            product.category.includes(
+              categories[category[category?.length - 1]]
+            )
+          );
+          setProducts(filtered);
+        }
       } catch (error) {
         console.log(error);
       }
@@ -51,17 +55,17 @@ const Products = () => {
     fetchProducts();
   }, [category]);
   return (
-    <main className="products_page">
-      <h2 className="products_title">PRODUCTS</h2>
+    <main className="page">
+      <h2 className="title">PRODUCTS</h2>
       <div className="container products_page_container">
-        <Sidebar openFilter={openFilter} />
+        <Sidebar openFilter={openFilter} setOpenFilter={setOpenFilter} />
         <section className="products_container">
           <button className="filter_btn" onClick={() => setOpenFilter(true)}>
             <BiFilterAlt className="filter_icon" />
             FILTER BY
           </button>
           <div className="products">
-            {products && products.length ? (
+            {products && products?.length ? (
               products.map((product) => {
                 return <ProductArticle product={product} key={product.id} />;
               })
@@ -73,7 +77,7 @@ const Products = () => {
             )}
           </div>
         </section>
-        {/* <Pagination /> */}
+        <Pagination />
       </div>
     </main>
   );

@@ -5,26 +5,62 @@ import { VscChevronUp, VscChevronDown } from 'react-icons/vsc';
 import Recommend from '../Recommend/Recommend';
 import { useParams } from 'react-router';
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cartSlice.js';
 
 const DetailPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
-  const [quantity, setQuantity] = useState(0);
-  const [currentImg, setCurrentImg] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [related, setRelated] = useState([]);
+  const [currentImg, setCurrentImg] = useState({ i: 0, img: null });
+  const [moveX, setMoveX] = useState(0);
+  const [lastIndex, setLastIndex] = useState(0);
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const res = await fetch(`http://localhost:3001/products?id=${id}`);
         const data = await res.json();
         setProduct(data[0]);
-        setCurrentImg(data[0]?.image);
+        setCurrentImg({ i: 0, img: data[0]?.image });
+        const cate = await fetch(
+          `http://localhost:3001/products?category=${data[0].category}`
+        );
+        const cateData = await cate.json();
+        setRelated(cateData.sort(() => Math.random() * 0.5).slice(0, 4));
       } catch (error) {
         console.log(error);
       }
     };
     fetchProducts();
   }, [id]);
-  if (!product) return;
+  const dispatch = useDispatch();
+
+  const handleAdd = () => {
+    if (product) {
+      const data = {
+        name: product?.name,
+        price: product?.price?.max,
+        img: product?.image,
+        amount: quantity,
+        id: product?.id,
+      };
+      dispatch(addToCart({ data }));
+    }
+  };
+
+  useEffect(() => {
+    console.log();
+    // if (currentImg.i > lastIndex && currentImg.i > 1) {
+    //   setMoveX(currentImg.i * -8.8 * 12.375);
+    //   setLastIndex(currentImg.i);
+    // }
+    // if (currentImg.i < lastIndex && currentImg.i !== 0) {
+    //   setMoveX(moveX + 8.8 * 12.375);
+    //   setLastIndex(currentImg.i);
+    // }
+  }, [currentImg.i, product.images, lastIndex, moveX]);
+
   const controlQuantity = (type) => {
     if (type === 'increase') {
       setQuantity(quantity + 1);
@@ -33,17 +69,30 @@ const DetailPage = () => {
       setQuantity(quantity - 1);
     }
   };
+
+  if (!product) return;
   return (
-    <main className="products_page">
-      <h2 className="products_title">{product?.category}</h2>
+    <main className="page">
+      <h2 className="title">{product?.category}</h2>
       <section className="detail_page_container container">
         <figure className="product_images">
-          <img src={currentImg} alt="" className="current_img" />
-          <div className="thumbs">
-            {product?.images &&
-              product.images.map((img) => (
-                <img src={img?.thumb} key={img.id} alt="" className="thumb" />
-              ))}
+          <img src={currentImg?.img} alt="" className="current_img" />
+          <div className="thumbs_container">
+            <div
+              className="thumbs"
+              style={{ transform: `translateX(${moveX}px)` }}
+            >
+              {product?.images &&
+                product.images.map((img, i) => (
+                  <img
+                    src={img?.thumb}
+                    key={img.id}
+                    alt=""
+                    className="thumb"
+                    onClick={() => setCurrentImg({ i, img: img?.thumb })}
+                  />
+                ))}
+            </div>
           </div>
         </figure>
 
@@ -79,7 +128,7 @@ const DetailPage = () => {
             </div>
           </div>
           <div className="btns">
-            <button className="add_to_bag">
+            <button className="add_to_bag" onClick={handleAdd}>
               ADD TO BAG <RiShoppingCart2Line className="cart_icon" />
             </button>
             <button className="heart_btn">
@@ -89,7 +138,7 @@ const DetailPage = () => {
           <h3>Warranty</h3>
         </div>
       </section>
-      <Recommend />
+      <Recommend related={related} />
     </main>
   );
 };

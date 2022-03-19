@@ -5,19 +5,25 @@ import Navbar from './components/Navbar/Navbar';
 import Products from './components/Products/Products';
 import Serivces from './components/Services/Serivces';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Cart from './components/Cart/Cart';
+import { Provider } from 'react-redux';
+import store from './redux/store.js';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Products />} />
-          <Route path="/products/:id" element={<DetailPage />} />
-        </Routes>
-      </BrowserRouter>
-      <Serivces />
-      <Footer />
+      <Provider store={store}>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Products />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/products/:id" element={<DetailPage />} />
+          </Routes>
+        </BrowserRouter>
+        <Serivces />
+        <Footer />
+      </Provider>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Pagination = () => {
-  return <div>fadsf</div>;
+  return <div>Pagination</div>;
 };
 
 export default Pagination;

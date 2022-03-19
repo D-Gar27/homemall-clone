@@ -1,0 +1,213 @@
+@import '../../variables';
+
+.page {
+  .title {
+    text-transform: uppercase;
+  }
+  .cart_container {
+    width: 100%;
+    @include flex(flex-start, flex-start);
+    gap: 2rem;
+    min-height: 540px;
+    padding-top: 2rem;
+    h2 {
+      color: $gray;
+      font-size: 1.25rem;
+      font-weight: 100;
+    }
+    .items_in_cart {
+      flex: 2;
+      width: 100%;
+      position: relative;
+      @include flex(flex-start, flex-start, $vertical: true);
+      gap: 1rem;
+      .empty_cart {
+        width: 100%;
+        height: 13.5rem;
+        @include flex(center, center, $vertical: true);
+        gap: 2rem;
+        button {
+          width: 13rem;
+          border: solid 1px $light_gray;
+          height: 2.25rem;
+          background-color: transparent;
+          font-size: 0.9rem;
+          color: $gray;
+          font-weight: 100;
+          @include flex(center, center);
+          gap: 0.5rem;
+          .arrow {
+            font-size: 1.1rem;
+          }
+          &:hover {
+            border: solid 1px $red;
+          }
+        }
+      }
+      .items_in_cart_container {
+        width: 100%;
+        @include flex(flex-start, flex-start, $vertical: true);
+        gap: 1rem;
+      }
+    }
+    .summary {
+      flex: 1;
+      width: 100%;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      padding-inline: 1rem;
+      background-color: $white_gray;
+      border-top: solid 2px $light_gray;
+      height: max-content;
+      position: relative;
+      .total {
+        width: 100%;
+        margin-top: 1.5rem;
+        @include flex(flex-start, center, $vertical: true);
+        gap: 2rem;
+        div {
+          width: 100%;
+          @include flex(space-between, center);
+          p {
+            color: $gray;
+          }
+          .total_items,
+          .discount {
+            font-size: 0.875rem;
+            font-weight: 100;
+          }
+        }
+      }
+      .coupon {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        padding-block: 1rem;
+        border-block: solid 1px $light_gray;
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+        padding-inline: 1rem;
+        .select {
+          position: relative;
+          .select_btn {
+            height: 2.25rem;
+            width: 100%;
+            background-color: $white;
+            color: $gray;
+            @include flex(space-between, center);
+            padding-inline: 1rem;
+            border: solid 1px $light_gray;
+            span {
+              flex: 1;
+              font-size: 1.1rem;
+              margin-left: 0.5rem;
+            }
+            .coupon_icon {
+              font-size: 1.25rem;
+            }
+            .down {
+              transition: transform 200ms ease;
+              transform: rotate(0deg);
+            }
+            .up {
+              transition: transform 200ms ease;
+              transform: rotate(180deg);
+            }
+          }
+          input {
+            width: 1rem;
+            position: absolute;
+            z-index: -4;
+          }
+          .coupons {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 5;
+            background-color: $white;
+            p {
+              padding-left: 1rem;
+              padding-block: 0.6rem;
+              font-weight: 100;
+              color: $gray;
+              &:hover {
+                background-color: $light_gray;
+              }
+            }
+          }
+        }
+        .apply_coupon {
+          margin-top: 1.5rem;
+          @include flex(space-between, center);
+          gap: 0.5rem;
+          input {
+            width: 100%;
+            height: 2.25rem;
+            border: solid $light_gray 1px;
+            padding-left: 0.5rem;
+            letter-spacing: 0.05rem;
+            font-size: 1.01rem;
+            font-weight: 100;
+            outline: none;
+            color: $gray;
+          }
+          button {
+            flex-grow: 0;
+            flex-shrink: 0;
+            width: 12.5rem;
+          }
+        }
+      }
+      button {
+        width: 100%;
+        background-color: $dark_blue;
+        height: 2.25rem;
+        color: $light_gray;
+        cursor: pointer;
+        position: relative;
+        border: solid $dark_blue 1px;
+        &:hover {
+          color: $dark_blue;
+          background-color: $light_gray;
+        }
+      }
+      .total_bottom {
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+        padding-inline: 1rem;
+        margin-top: 1.5rem;
+        @include flex(space-between, center);
+        background-color: $dark_blue;
+        color: $white;
+        height: 3.75rem;
+        .sub_total {
+          font-size: 0.875rem;
+          position: relative;
+          z-index: 2;
+        }
+        .total_amount {
+          font-size: 1.125rem;
+          position: relative;
+          z-index: 2;
+        }
+      }
+      .spike {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -1rem;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .page {
+    .cart_container {
+      @include flex(flex-start, flex-start, $vertical: true);
+      .summary {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

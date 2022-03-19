@@ -17,6 +17,26 @@
     object-fit: contain;
     width: 100%;
   }
+  .blur {
+    background-image: url('../../images/shlogo.png');
+    height: 15rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 15rem;
+      background-color: rgba($color: $white, $alpha: 0.5);
+      top: 0;
+      left: 0;
+      z-index: 2;
+      backdrop-filter: blur(20px);
+    }
+  }
   .info {
     width: 100%;
     @include flex(center, center, $vertical: true);
