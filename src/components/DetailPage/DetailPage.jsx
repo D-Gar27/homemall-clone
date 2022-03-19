@@ -21,12 +21,14 @@ const DetailPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch(`http://localhost:3001/products?id=${id}`);
+        const res = await fetch(
+          `https://home-mall.herokuapp.com/api/products?id=${id}`
+        );
         const data = await res.json();
         setProduct(data[0]);
         setCurrentImg({ i: 0, img: data[0]?.image });
         const cate = await fetch(
-          `http://localhost:3001/products?category=${data[0].category}`
+          `https://home-mall.herokuapp.com/api/products?category=${data[0].category}`
         );
         const cateData = await cate.json();
         setRelated(cateData.sort(() => Math.random() * 0.5).slice(0, 4));

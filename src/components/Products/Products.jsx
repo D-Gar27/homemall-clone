@@ -28,7 +28,7 @@ const Products = () => {
     const fetchProducts = async () => {
       try {
         const res = await fetch(
-          `http://localhost:3001/products?_limit=15&_page=1`
+          `https://home-mall.herokuapp.com/api/products?_limit=15&_page=1`
         );
         const data = await res.json();
         setProducts(data);
@@ -41,7 +41,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch(`http://localhost:3001/products`);
+        const res = await fetch(`https://home-mall.herokuapp.com/api/products`);
         const data = await res.json();
         if (category?.length) {
           const filtered = data.filter((product) =>
