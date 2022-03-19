@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import Pagination from '../Pagination/Pagination';
+// import Pagination from '../Pagination/Pagination';
 import ProductArticle from '../ProductArticle/ProductArticle';
 import Sidebar from '../Sidebar/Sidebar';
 import './Products.scss';
+import { useNavigate } from 'react-router';
 import { BiFilterAlt } from 'react-icons/bi';
 
 const categories = [
@@ -21,6 +22,8 @@ const Products = () => {
   let [searchParams] = useSearchParams();
   const [openFilter, setOpenFilter] = useState(false);
   const category = searchParams.get('category');
+  const name = searchParams.get('name');
+  const brand = searchParams.get('brand');
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -34,7 +37,7 @@ const Products = () => {
       }
     };
     fetchProducts();
-  }, [category]);
+  }, [category, name, brand]);
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -48,12 +51,23 @@ const Products = () => {
           );
           setProducts(filtered);
         }
+        if (name) {
+          const filtered = data.filter((product) =>
+            product.name.includes(name)
+          );
+          setProducts(filtered);
+        }
+        if (brand) {
+          const filtered = data.filter((product) => product.brand === brand);
+          setProducts(filtered);
+        }
       } catch (error) {
         console.log(error);
       }
     };
     fetchProducts();
-  }, [category]);
+  }, [name, category, brand]);
+  const navigate = useNavigate();
   return (
     <main className="page">
       <h2 className="title">PRODUCTS</h2>
@@ -72,12 +86,14 @@ const Products = () => {
             ) : (
               <section className="no_products">
                 <h2>NO PRODUCTS TO SHOW</h2>
-                <button className="clear_btn">CLEAR FILERS</button>
+                <button className="clear_btn" onClick={() => navigate('/')}>
+                  CLEAR FILERS
+                </button>
               </section>
             )}
           </div>
         </section>
-        <Pagination />
+        {/* <Pagination /> */}
       </div>
     </main>
   );

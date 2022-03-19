@@ -3,7 +3,7 @@
 .category {
   width: 100%;
   height: 2.125rem;
-  padding: 0 12px;
+  padding: 0 0.85rem;
   border: solid 1px $light_gray;
   color: $gray;
   cursor: pointer;
@@ -11,7 +11,7 @@
   overflow-y: hidden;
   .cate {
     width: 100%;
-    height: 2.125rem;
+    height: 2rem;
     @include flex(space-between, center);
     position: relative;
     span {
@@ -33,7 +33,20 @@
     background-color: transparent;
     @include flex(flex-start, center);
     gap: 0.5rem;
-    margin-top: 1.1rem;
+    margin-top: 1rem;
+    .checkbox {
+      position: relative;
+      .square_icon {
+        font-size: 1.1rem;
+      }
+      .check_icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: $red;
+      }
+    }
   }
   &:hover {
     border-color: $gray;
@@ -41,7 +54,7 @@
 }
 
 .clicked {
-  height: 4.75rem;
+  height: 5.24rem;
   .cate {
     .upward {
       transition: ease 300ms transform;

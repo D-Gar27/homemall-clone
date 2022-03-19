@@ -40,6 +40,9 @@
           }
         }
       }
+      .scroll_caro {
+        display: none;
+      }
     }
     .product_details {
       position: sticky;
@@ -124,9 +127,11 @@
           height: 2.25rem;
           @include flex(center, center);
         }
+        width: 100%;
         .add_to_bag {
           gap: 0.5rem;
-          width: 15rem;
+          width: 100%;
+          max-width: 15rem;
           background-color: $dark_blue;
           padding: 0.6rem;
           color: $light_gray;
@@ -171,6 +176,25 @@
       .product_details {
         margin-top: 1rem;
         padding-left: 1rem;
+      }
+      .product_images {
+        .current_img {
+          display: none;
+        }
+        .thumbs_container {
+          display: none;
+        }
+        .scroll_caro {
+          display: flex;
+          overflow-x: scroll;
+          width: 100%;
+          scroll-snap-type: x mandatory;
+          img {
+            width: 100%;
+            object-fit: cover;
+            scroll-snap-align: start;
+          }
+        }
       }
     }
   }

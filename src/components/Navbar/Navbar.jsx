@@ -8,17 +8,19 @@ import {
 import { FiTwitter } from 'react-icons/fi';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BsArrowLeft } from 'react-icons/bs';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import logo from '../../images/shlogo.png';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 
 const Navbar = () => {
   const [isOpened, setIsOpened] = useState(false);
   const [isSearch, setIsSearch] = useState(false);
   const { itemsAmount } = useSelector((state) => state.cart);
   const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const searchRef = useRef();
   return (
     <header className="header">
       <nav className="navbar container">
@@ -33,10 +35,20 @@ const Navbar = () => {
           <button className="back_arrow" onClick={() => setIsSearch(false)}>
             <BsArrowLeft />
           </button>
-          <div className="search_bar">
+          <form
+            className="search_bar"
+            onSubmit={(e) => {
+              e.preventDefault();
+              navigate(`/?name=${searchRef.current.value}`);
+            }}
+          >
             <AiOutlineSearch className="search_icon" />
-            <input type="text" placeholder="Search by product name..." />
-          </div>
+            <input
+              type="text"
+              placeholder="Search by product name..."
+              ref={searchRef}
+            />
+          </form>
         </div>
         <ul className="nav_menu">
           <button
@@ -68,11 +80,23 @@ const Navbar = () => {
             <RiLoginCircleLine />
           </li>
           <button className="hamburger" onClick={() => setIsOpened(!isOpened)}>
-            <div className={isOpened ? 'stick animate_stick' : 'stick'}></div>
+            <div
+              className={isOpened ? 'stick animate_stick top' : 'stick top'}
+            ></div>
+            <div
+              className={
+                isOpened ? 'stick animate_stick middle' : 'stick middle'
+              }
+            ></div>
+            <div
+              className={
+                isOpened ? 'stick animate_stick bottom' : 'stick bottom'
+              }
+            ></div>
           </button>
         </ul>
       </nav>
-      <nav className="sub_navbar">
+      <nav className={isOpened ? 'sub_navbar opened_sub' : 'sub_navbar'}>
         <p>HOME</p>
         <p
           className={
@@ -92,6 +116,17 @@ const Navbar = () => {
         <p>BLOG</p>
         <p>ABOUT US</p>
         <p>CONTACT</p>
+        <div className="social_media">
+          <p className="facebook">
+            <RiFacebookCircleLine className="icon" /> Facebook
+          </p>
+          <p>
+            <FiTwitter className="icon" /> Twitter
+          </p>
+          <p>
+            <RiInstagramLine className="icon" /> Instagram
+          </p>
+        </div>
       </nav>
     </header>
   );

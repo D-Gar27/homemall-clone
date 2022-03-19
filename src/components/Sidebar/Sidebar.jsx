@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import CategoryBtn from '../CategoryBtn/CategoryBtn';
 import './Sidebar.scss';
 import { VscChromeClose } from 'react-icons/vsc';
@@ -23,6 +23,8 @@ const Sidebar = ({ openFilter, setOpenFilter }) => {
   const [categories, setCategories] = useState([]);
   let [searchParams] = useSearchParams();
   const category = searchParams.get('category');
+  const brand = searchParams.get('brand');
+  const name = searchParams.get('name');
   const navigate = useNavigate();
   useEffect(() => {
     if (categories.length) {
@@ -45,8 +47,8 @@ const Sidebar = ({ openFilter, setOpenFilter }) => {
             onClick={() => setOpenFilter(false)}
           />
         </p>
-        {category ? (
-          <button className="clear_btn" onClick={() => navigate('/?page=1')}>
+        {category || brand || name ? (
+          <button className="clear_btn" onClick={() => navigate('/')}>
             CLEAR ALL
           </button>
         ) : (
@@ -78,7 +80,11 @@ const Sidebar = ({ openFilter, setOpenFilter }) => {
           <h4>Brands</h4>
           <ul className="brands_container">
             {brands.map((brand) => (
-              <li key={brand} className="brand">
+              <li
+                key={brand}
+                className="brand"
+                onClick={() => navigate(`/?brand=${brand}`)}
+              >
                 <p>BRAND</p>
               </li>
             ))}

@@ -7,6 +7,7 @@ import { useParams } from 'react-router';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cartSlice.js';
+import AddedToCart from '../AddedToCart/AddedToCart';
 
 const DetailPage = () => {
   const { id } = useParams();
@@ -15,6 +16,7 @@ const DetailPage = () => {
   const [related, setRelated] = useState([]);
   const [currentImg, setCurrentImg] = useState({ i: 0, img: null });
   const [moveX, setMoveX] = useState(0);
+  const [askToCart, setAskToCart] = useState(false);
   const [lastIndex, setLastIndex] = useState(0);
   useEffect(() => {
     const fetchProducts = async () => {
@@ -45,20 +47,20 @@ const DetailPage = () => {
         amount: quantity,
         id: product?.id,
       };
+      setAskToCart(true);
       dispatch(addToCart({ data }));
     }
   };
 
   useEffect(() => {
-    console.log();
-    // if (currentImg.i > lastIndex && currentImg.i > 1) {
-    //   setMoveX(currentImg.i * -8.8 * 12.375);
-    //   setLastIndex(currentImg.i);
-    // }
-    // if (currentImg.i < lastIndex && currentImg.i !== 0) {
-    //   setMoveX(moveX + 8.8 * 12.375);
-    //   setLastIndex(currentImg.i);
-    // }
+    if (currentImg.i > lastIndex && currentImg.i > 1) {
+      setMoveX(currentImg.i * -7.25 * 12.375);
+      setLastIndex(currentImg.i);
+    }
+    if (currentImg.i < lastIndex && currentImg.i !== 0) {
+      setMoveX(moveX + 7.25 * 12.375);
+      setLastIndex(currentImg.i);
+    }
   }, [currentImg.i, product.images, lastIndex, moveX]);
 
   const controlQuantity = (type) => {
@@ -93,6 +95,12 @@ const DetailPage = () => {
                   />
                 ))}
             </div>
+          </div>
+          <div className="scroll_caro">
+            {product?.images &&
+              product.images.map((img, i) => (
+                <img src={img?.thumb} key={img.id} alt="" className="thumb" />
+              ))}
           </div>
         </figure>
 
@@ -139,6 +147,7 @@ const DetailPage = () => {
         </div>
       </section>
       <Recommend related={related} />
+      {askToCart && <AddedToCart setAskToCart={setAskToCart} />}
     </main>
   );
 };

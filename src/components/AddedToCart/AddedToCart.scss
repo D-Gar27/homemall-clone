@@ -1,0 +1,87 @@
+@import '../../variables';
+
+.added_cart {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: $gray, $alpha: 0.3);
+  z-index: 102;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+  .success {
+    background-color: $white;
+    @include flex(center, center, $vertical: true);
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    min-height: 142px;
+    padding: 1.5rem;
+    p {
+      @include flex(center, center);
+      gap: 1rem;
+      .success_icon {
+        font-size: 1.5rem;
+        color: #62c710;
+      }
+      span {
+        color: #112817;
+        background-color: $light_gray;
+        padding: 0.1rem;
+      }
+    }
+    .options_btns {
+      @include flex(center, center);
+      gap: 1rem;
+      width: 100%;
+      button {
+        height: 2.25rem;
+      }
+      .continue_btn {
+        width: 190px;
+        background-color: $dark_blue;
+        color: $light_gray;
+        cursor: pointer;
+        border: solid $dark_blue 1px;
+        &:hover {
+          color: $dark_blue;
+          background-color: $light_gray;
+        }
+      }
+      .cart_btn {
+        width: 190px;
+        border: solid 1px $light_gray;
+        background-color: transparent;
+        color: $gray;
+        &:hover {
+          border: solid 1px $red;
+        }
+      }
+    }
+  }
+}
+
+@include tablet-sm {
+  .added_cart {
+    .success {
+      @include flex(center, flex-start, $vertical: true);
+      p {
+        @include flex(flex-start, center);
+      }
+      .options_btns {
+        @include flex(center, center, $vertical: true);
+        width: 100%;
+        button {
+          width: 100% !important;
+          max-width: 25rem;
+        }
+        .link {
+          width: 100% !important;
+          max-width: 25rem;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import './CategoryBtn.scss';
-import { BsChevronRight } from 'react-icons/bs';
+import { BsChevronRight, BsSquare, BsCheckLg } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
@@ -34,7 +34,10 @@ const CategoryBtn = ({ cate, id, setCategories, categories }) => {
           setChecked(!checked);
         }}
       >
-        {/* <input type="checkbox" name={cate} id={cate} /> */}
+        <div className="checkbox">
+          <BsSquare className="square_icon" />
+          {checked && <BsCheckLg className="check_icon" />}
+        </div>
         All
       </button>
     </li>
