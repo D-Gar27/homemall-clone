@@ -3,12 +3,12 @@ Code test for Venus Lab
 Scripts that need to run
 
 
-### `npm intall`
+### `npm intall (or) yarn install`
 
 to install dependencies
 
 
-### `npm start`
+### `npm start (or) yarn start`
 
 to start the development server
 
