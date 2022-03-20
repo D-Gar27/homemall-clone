@@ -21,14 +21,12 @@ const DetailPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch(
-          `https://home-mall.herokuapp.com/api/products?id=${id}`
-        );
+        const res = await fetch(`http://localhost:3001/products?id=${id}`);
         const data = await res.json();
         setProduct(data[0]);
         setCurrentImg({ i: 0, img: data[0]?.image });
         const cate = await fetch(
-          `https://home-mall.herokuapp.com/api/products?category=${data[0].category}`
+          `http://localhost:3001/products?category=${data[0].category}`
         );
         const cateData = await cate.json();
         setRelated(cateData.sort(() => Math.random() * 0.5).slice(0, 4));
@@ -44,7 +42,7 @@ const DetailPage = () => {
     if (product) {
       const data = {
         name: product?.name,
-        price: product?.price?.max,
+        price: product?.price,
         img: product?.image,
         amount: quantity,
         id: product?.id,
@@ -111,7 +109,7 @@ const DetailPage = () => {
             <h2>{product.name}</h2>
             <small>Item Code: {product?.code}</small>
           </div>
-          <h3 className="price">{product?.price?.max} MMK</h3>
+          <h3 className="price">{product?.price} MMK</h3>
           <h3>Description</h3>
           <h3>Dimensions</h3>
           <h3>Colour</h3>

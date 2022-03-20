@@ -10,7 +10,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { BsArrowLeft } from 'react-icons/bs';
 import { useRef, useState } from 'react';
 import logo from '../../images/shlogo.png';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router';
 
@@ -21,6 +21,10 @@ const Navbar = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const searchRef = useRef();
+  let [searchParams] = useSearchParams();
+  const category = searchParams.get('category');
+  const brand = searchParams.get('brand');
+  const price = searchParams.get('price');
   return (
     <header className="header">
       <nav className="navbar container">
@@ -39,7 +43,13 @@ const Navbar = () => {
             className="search_bar"
             onSubmit={(e) => {
               e.preventDefault();
-              navigate(`/?name=${searchRef.current.value}`);
+              navigate(
+                `/?name=${searchRef.current.value}${
+                  category ? `&category=${category}` : ''
+                }${brand ? `&brand=${brand}` : ''}${
+                  price ? `&price=${price}` : ''
+                }`
+              );
             }}
           >
             <AiOutlineSearch className="search_icon" />

@@ -21,6 +21,10 @@ function App() {
             <Route path="/products/:id" element={<DetailPage />} />
           </Routes>
         </BrowserRouter>
+        <div className="chat">
+          <div className="stick"></div>
+          <div className="stick long"></div>
+        </div>
         <Serivces />
         <Footer />
       </Provider>

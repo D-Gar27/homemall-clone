@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import CategoryBtn from '../CategoryBtn/CategoryBtn';
 import './Sidebar.scss';
 import { VscChromeClose } from 'react-icons/vsc';
+import RangeSlider from '../RangeSlider/RangeSlider';
 
 const brands = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
@@ -25,6 +26,7 @@ const Sidebar = ({ openFilter, setOpenFilter }) => {
   const category = searchParams.get('category');
   const brand = searchParams.get('brand');
   const name = searchParams.get('name');
+  const price = searchParams.get('price');
   const navigate = useNavigate();
   useEffect(() => {
     if (categories.length) {
@@ -47,7 +49,7 @@ const Sidebar = ({ openFilter, setOpenFilter }) => {
             onClick={() => setOpenFilter(false)}
           />
         </p>
-        {category || brand || name ? (
+        {category || brand || name || price ? (
           <button className="clear_btn" onClick={() => navigate('/')}>
             CLEAR ALL
           </button>
@@ -73,7 +75,7 @@ const Sidebar = ({ openFilter, setOpenFilter }) => {
         </div>
         <div className="price_range">
           <h4>Prices</h4>
-          <input type="range" name="" id="" />
+          <RangeSlider />
         </div>
         <h4 className="colors">Colors</h4>
         <div className="brands">
@@ -83,7 +85,16 @@ const Sidebar = ({ openFilter, setOpenFilter }) => {
               <li
                 key={brand}
                 className="brand"
-                onClick={() => navigate(`/?brand=${brand}`)}
+                onClick={() =>
+                  navigate({
+                    pathname: '/',
+                    search: `?_page=1${
+                      category ? `&category=${categories[category]}` : ''
+                    }&brand=${brand}${name ? `&name=${name}` : ''}${
+                      price ? `&price=${price}` : ''
+                    }`,
+                  })
+                }
               >
                 <p>BRAND</p>
               </li>
@@ -93,8 +104,12 @@ const Sidebar = ({ openFilter, setOpenFilter }) => {
         <div className="blank"></div>
         {openFilter && (
           <div className="apply_btns">
-            <button className="clear_btn2">Clear</button>
-            <button className="apply_btn">Apply</button>
+            <button className="clear_btn2" onClick={() => setOpenFilter(false)}>
+              Clear
+            </button>
+            <button className="apply_btn" onClick={() => setOpenFilter(false)}>
+              Apply
+            </button>
           </div>
         )}
       </aside>

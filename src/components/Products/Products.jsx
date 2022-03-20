@@ -6,6 +6,7 @@ import Sidebar from '../Sidebar/Sidebar';
 import './Products.scss';
 import { useNavigate } from 'react-router';
 import { BiFilterAlt } from 'react-icons/bi';
+import Pagination from '../Pagination/Pagination';
 
 const categories = [
   'Bed Room',
@@ -19,16 +20,19 @@ const categories = [
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [pageCount, setPageCount] = useState(1);
   let [searchParams] = useSearchParams();
   const [openFilter, setOpenFilter] = useState(false);
   const category = searchParams.get('category');
   const name = searchParams.get('name');
   const brand = searchParams.get('brand');
+  const page = searchParams.get('page');
+  const price = searchParams.get('price');
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const res = await fetch(
-          `https://home-mall.herokuapp.com/api/products?_limit=15&_page=1`
+          `http://localhost:3001/products?_limit=15&_page=${page}`
         );
         const data = await res.json();
         setProducts(data);
@@ -37,36 +41,30 @@ const Products = () => {
       }
     };
     fetchProducts();
-  }, [category, name, brand]);
+  }, [category, name, brand, page]);
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch(`https://home-mall.herokuapp.com/api/products`);
+        const res = await fetch(
+          `http://localhost:3001/products?${brand ? `&brand=${brand}` : ''}${
+            category ? `&category=${categories[category[0]]}` : ''
+          }${name ? `&name_like=${name}` : ''}${
+            price
+              ? `&price_gte=${price.split('~')[0]}&price_lte=${
+                  price.split('~')[1]
+                }`
+              : ''
+          }`
+        );
         const data = await res.json();
-        if (category?.length) {
-          const filtered = data.filter((product) =>
-            product.category.includes(
-              categories[category[category?.length - 1]]
-            )
-          );
-          setProducts(filtered);
-        }
-        if (name) {
-          const filtered = data.filter((product) =>
-            product.name.includes(name)
-          );
-          setProducts(filtered);
-        }
-        if (brand) {
-          const filtered = data.filter((product) => product.brand === brand);
-          setProducts(filtered);
-        }
+        setPageCount(data);
+        setProducts(data.slice(0, 15));
       } catch (error) {
         console.log(error);
       }
     };
     fetchProducts();
-  }, [name, category, brand]);
+  }, [name, category, brand, price]);
   const navigate = useNavigate();
   return (
     <main className="page">
@@ -93,8 +91,8 @@ const Products = () => {
             )}
           </div>
         </section>
-        {/* <Pagination /> */}
       </div>
+      <Pagination length={Math.ceil(pageCount.length)} />
     </main>
   );
 };

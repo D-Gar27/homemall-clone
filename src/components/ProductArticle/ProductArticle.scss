@@ -68,6 +68,10 @@
 
 @include tablet {
   .product_article {
-    max-height: 27rem;
+    max-height: 30rem;
+    .product_img {
+      object-fit: contain;
+      padding: 1rem;
+    }
   }
 }

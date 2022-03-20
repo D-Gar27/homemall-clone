@@ -16,7 +16,7 @@ const ProductArticle = ({ product }) => {
         )}
         <div className="info">
           <p className="product_name">{product?.name}</p>
-          <p className="product_price">{product?.price?.max} MMK</p>
+          <p className="product_price">{product?.price} MMK</p>
         </div>
         <button className="heart_icon">
           <BsHeart />

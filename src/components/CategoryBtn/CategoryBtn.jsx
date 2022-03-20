@@ -2,12 +2,17 @@ import './CategoryBtn.scss';
 import { BsChevronRight, BsSquare, BsCheckLg } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
-const CategoryBtn = ({ cate, id, setCategories, categories }) => {
+const CategoryBtn = ({ cate, id }) => {
   const [clicked, setClicked] = useState(false);
   const [checked, setChecked] = useState(false);
   let [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const category = searchParams.get('category');
+  const brand = searchParams.get('brand');
+  const name = searchParams.get('name');
+  const price = searchParams.get('price');
   useEffect(() => {
     if (category) return;
     setChecked(false);
@@ -23,15 +28,20 @@ const CategoryBtn = ({ cate, id, setCategories, categories }) => {
       <button
         className="check"
         onClick={() => {
-          let tempCate = [];
-          tempCate = categories;
-          if (!tempCate.includes(id)) {
-            setCategories([...categories, id]);
-          } else {
-            tempCate = categories.filter((cate) => cate !== id);
-            setCategories(tempCate);
-          }
           setChecked(!checked);
+          if (checked) {
+            navigate(
+              `?_page=1${brand ? `&brand=${brand}` : ''}${
+                name ? `&name=${name}` : ''
+              }${price ? `&price=${price}` : ''}`
+            );
+          } else {
+            navigate(
+              `?_page=1${brand ? `&brand=${brand}` : ''}&category=${id}${
+                name ? `&name=${name}` : ''
+              }${price ? `&price=${price}` : ''}`
+            );
+          }
         }}
       >
         <div className="checkbox">
